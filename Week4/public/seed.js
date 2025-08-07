@@ -17,13 +17,13 @@ const Project = mongoose.model('Project', ProjectSchema);
 const sampleData = [
   {
     title: "Kitten 2",
-    image: "images/kitten-2.png",
+    image: "images/kitten-2.jpg",
     link: "About Kitten 2",
     description: "Fluffy and adorable kitten",
   },
   {
     title: "Kitten 3",
-    image: "images/kitten-3.png",
+    image: "images/kitten-3.jpg",
     link: "About Kitten 3",
     description: "Loves to nap in sunbeams",
   },
@@ -35,3 +35,4 @@ Project.insertMany(sampleData)
     mongoose.connection.close();
   })
   .catch(err => console.error(err));
+

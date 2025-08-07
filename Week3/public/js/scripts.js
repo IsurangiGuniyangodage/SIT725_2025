@@ -3,15 +3,14 @@ const cardList = [
     title: "Kitten 02",
     image: "images/kitten-2.jpg",
     link: "About Kitten 02",
-    description: "Demo description about kitten 2"
+    description: "Demo description about kitten 2",
   },
   {
     title: "Kitten 03",
     image: "images/kitten-3.jpg",
     link: "About Kitten 03",
-    description: "Demo description about kitten 3"
-    },
-
+    description: "Demo description about kitten 3",
+  },
 ];
 
 const clickMe = () => {
@@ -20,16 +19,16 @@ const clickMe = () => {
 
 const submitForm = () => {
   let formData = {
-    first_name: $('#first_name').val(),
-    last_name: $('#last_name').val(),
-    password: $('#password').val(),
-    email: $('#email').val()
+    first_name: $("#first_name").val(),
+    last_name: $("#last_name").val(),
+    password: $("#password").val(),
+    email: $("#email").val(),
   };
   console.log("Form Data Submitted: ", formData);
 };
 
 const addCards = (items) => {
-  items.forEach(item => {
+  items.forEach((item) => {
     let itemToAppend = `
       <div class="col s4 center-align">
         <div class="card medium">
@@ -54,12 +53,19 @@ const addCards = (items) => {
   });
 };
 
+const getProjects = () => {
+  $.get("/api/projects", (response) => {
+    if (response.statusCode == 200) {
+      addCards(response.data);
+    }
+  });
+};
+
 $(document).ready(function () {
-  $('.materialboxed').materialbox();
-  $('.modal').modal();
-  $('#formSubmit').click(submitForm);
-  addCards(cardList);
+  $(".materialboxed").materialbox();
+  $("#formSubmit").click(() => {
+    submitForm();
+  });
+  getProjects();
+  $(".modal").modal();
 });
-
-
-
