@@ -56,7 +56,7 @@ mongoose.connection.once("open", async () => {
   }
 });
 
-// API with fallback
+// API endpoint to get projects
 app.get("/api/projects", async (req, res) => {
   try {
     const projects = await Project.find({}).lean();
