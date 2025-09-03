@@ -1,0 +1,53 @@
+.navbar-size {
+width: 95%;
+margin: 0 auto;
+}
+.user-image-size {
+height: 64px;
+}
+.navbar-size {
+width: 95%;
+margin: 0 auto;
+}
+.user-image-size {
+height: 56px;
+margin: 4px 0;
+}
+.main-body {
+background-color: #eb9da0;
+color: white;
+height: calc(100vh - 64px);
+}
+.materialboxed-image {
+margin: 0 auto;
+height: 400px;
+}
+.click-me-button {
+background-color: #EE6E73;
+margin-top: 50px;
+}
+.modal-content input {
+  margin-bottom: 20px;
+}
+.modal-content {
+  background: #f9f9f9;
+}
+.card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  transition: 0.3s ease-in-out;
+}
+#catFactModal .modal-content {
+  background-color: #fffde7; /* soft yellow background */
+  color: #212121; /* dark text */
+  font-family: 'Segoe UI', sans-serif;
+}
+
+#catFactModal h4 {
+  font-weight: 600;
+}
+
+#catFactModal .modal-footer a {
+  font-weight: bold;
+}
+
